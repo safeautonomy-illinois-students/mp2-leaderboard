@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECE 484 · MP2 Leaderboard</title>
+
+  <!-- Google Fonts: Roboto (matches ece484-site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Design tokens ──────────────────────────────────────── */
+    :root {
+      --primary:        #1565c0;   /* Illinois blue-ish, material indigo */
+      --primary-dark:   #003c8f;
+      --accent:         #e65100;   /* Illinois orange */
+      --bg:             #f5f5f5;
+      --surface:        #ffffff;
+      --surface-alt:    #f8f9fa;
+      --border:         #e0e0e0;
+      --text:           #212121;
+      --text-secondary: #616161;
+      --gold:           #f9a825;
+      --silver:         #90a4ae;
+      --bronze:         #a1887f;
+      --gold-bg:        #fffde7;
+      --silver-bg:      #eceff1;
+      --bronze-bg:      #efebe9;
+      --radius:         6px;
+    }
+
+    /* ── Reset / Base ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header / Nav bar ───────────────────────────────────── */
+    header {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-sep { flex: 1; }
+
+    .nav-link {
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: var(--radius);
+      transition: background .15s;
+    }
+    .nav-link:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    /* ── Hero strip ─────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #fff;
+      padding: 36px 24px 32px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: .2px;
+      margin-bottom: 6px;
+    }
+
+    .hero p {
+      font-size: .95rem;
+      opacity: .85;
+    }
+
+    /* ── Main content ───────────────────────────────────────── */
+    main {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+
+    /* ── Card ───────────────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-header h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ── Controls ───────────────────────────────────────────── */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #last-updated {
+      font-size: .78rem;
+      color: var(--text-secondary);
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Roboto', sans-serif;
+      font-size: .8rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--surface-alt); border-color: #bdbdbd; }
+    .btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* ── Table ──────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+
+    thead {
+      background: var(--surface-alt);
+      border-bottom: 2px solid var(--border);
+    }
+
+    th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: var(--surface-alt); }
+
+    /* ── Rank badge ─────────────────────────────────────────── */
+    .rank { font-weight: 700; font-size: 1rem; }
+
+    tr.gold   { background: var(--gold-bg);   }
+    tr.silver { background: var(--silver-bg); }
+    tr.bronze { background: var(--bronze-bg); }
+    tr.gold:hover   { background: #fff8e1; }
+    tr.silver:hover { background: #e4e7ea; }
+    tr.bronze:hover { background: #e8e0dc; }
+
+    .medal {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      line-height: 26px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    td.rank-cell { font-family: 'Roboto Mono', monospace; font-weight: 700; }
+
+    /* ── Team name ──────────────────────────────────────────── */
+    .team-name {
+      font-weight: 500;
+      font-family: 'Roboto Mono', monospace;
+      font-size: .88rem;
+    }
+
+    /* ── Metric cells ───────────────────────────────────────── */
+    .metric {
+      font-family: 'Roboto Mono', monospace;
+      font-size: .88rem;
+    }
+
+    .score-cell {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--primary);
+    }
+
+    /* ── Hidden columns toggle ──────────────────────────────── */
+    .col-hidden { display: none; }
+
+    /* ── Status / loading ───────────────────────────────────── */
+    #status {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-secondary);
+      font-size: .95rem;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: .78rem;
+      color: var(--text-secondary);
+    }
+
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.35rem; }
+      th, td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav bar ──────────────────────────────────────────────── -->
+<header>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">ECE 484 · SP26</a>
+    <span class="nav-sep"></span>
+    <a class="nav-link" href="https://courses.grainger.illinois.edu/ece484/" target="_blank">Course Site</a>
+    <a class="nav-link" href="https://github.com/UIUC-Robotics/gem_simulator" target="_blank">Simulator</a>
+  </div>
+</header>
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<div class="hero">
+  <h1>MP2 Leaderboard</h1>
+  <p>Autonomous Driving · Silverstone Circuit · Spring 2026</p>
+</div>
+
+<!-- ── Main ─────────────────────────────────────────────────── -->
+<main>
+  <div class="card">
+    <div class="card-header">
+      <h2>Team Rankings</h2>
+      <div class="controls">
+        <span id="last-updated"></span>
+        <!--
+          DISPLAY MODE TOGGLE
+          ───────────────────
+          Two modes:
+            "full"     → shows Rank, Team, Score, Lap Time, Off-Track Time
+            "laponly"  → shows Rank, Team, Lap Time only  (hide score/off-track)
+
+          To permanently switch to lap-time-only mode, change the default value
+          of the `displayMode` variable in the <script> block below to "laponly".
+          Or just click the button at runtime — it persists in localStorage.
+        -->
+        <button class="btn" id="btn-full"    onclick="setMode('full')">Full Score</button>
+        <button class="btn" id="btn-laponly" onclick="setMode('laponly')">Lap Time Only</button>
+        <button class="btn" onclick="fetchLeaderboard()">↻ Refresh</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div id="status">
+        <span class="spinner"></span> Loading leaderboard…
+      </div>
+      <table id="lb-table" style="display:none">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th class="col-score">Score</th>
+            <th>Lap Time</th>
+            <th class="col-offtk">Off-Track Time</th>
+            <th class="col-offtk">Last Run</th>
+          </tr>
+        </thead>
+        <tbody id="lb-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <p style="margin-top:14px; font-size:.8rem; color:var(--text-secondary);">
+    Score = Lap Time + (Off-Track Time × 2) &nbsp;·&nbsp;
+    Only each team's personal best is shown &nbsp;·&nbsp;
+    Updates automatically after each push to <code>main</code>
+  </p>
+</main>
+
+<footer>
+  ECE 484 · Safe Autonomy &nbsp;·&nbsp;
+  University of Illinois Urbana-Champaign &nbsp;·&nbsp;
+  <a href="https://safeautonomy-illinois.github.io/ece484-site/" target="_blank">Course Website</a>
+</footer>
+
+<script>
+  // ── Config ──────────────────────────────────────────────────
+  const LEADERBOARD_JSON = "leaderboard.json";
+
+  // Default display mode: "full" or "laponly"
+  // Change this to "laponly" to permanently hide score + off-track columns.
+  const DEFAULT_MODE = "full";
+
+  // Medal emojis for top 3
+  const MEDALS = ["🥇", "🥈", "🥉"];
+  const ROW_CLASSES = ["gold", "silver", "bronze"];
+
+  // ── State ────────────────────────────────────────────────────
+  let displayMode = localStorage.getItem("lb_mode") || DEFAULT_MODE;
+
+  // ── Fetch & render ───────────────────────────────────────────
+  async function fetchLeaderboard() {
+    try {
+      // Cache-bust so GitHub Pages serves fresh JSON
+      const res = await fetch(LEADERBOARD_JSON + "?t=" + Date.now());
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      render(data);
+    } catch (err) {
+      document.getElementById("status").innerHTML =
+        `<span style="color:#c62828">Failed to load leaderboard.json — ${err.message}</span>`;
+    }
+  }
+
+  function render(data) {
+    const teams = (data.teams || []).slice();
+
+    // Sort by lap_time ascending (lower = better)
+    teams.sort((a, b) => a.lap_time - b.lap_time);
+
+    const tbody = document.getElementById("lb-body");
+    tbody.innerHTML = "";
+
+    if (teams.length === 0) {
+      document.getElementById("status").textContent = "No submissions yet. Be the first!";
+      document.getElementById("lb-table").style.display = "none";
+      return;
+    }
+
+    teams.forEach((entry, i) => {
+      const rank = i + 1;
+      const medal = rank <= 3 ? `<span class="medal">${MEDALS[i]}</span>` : rank;
+      const rowClass = rank <= 3 ? ROW_CLASSES[i] : "";
+
+      const score    = typeof entry.score    === "number" ? entry.score.toFixed(2)    : "—";
+      const lapTime  = typeof entry.lap_time === "number" ? entry.lap_time.toFixed(2) : "—";
+      const offTrack = typeof entry.off_track=== "number" ? entry.off_track.toFixed(2): "—";
+
+      const ts = entry.timestamp
+        ? new Date(entry.timestamp).toLocaleString("en-US", { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" })
+        : "—";
+
+      const runLink = entry.run_url
+        ? `<a href="${entry.run_url}" target="_blank" style="color:var(--primary); font-size:.78rem;">view run</a>`
+        : "—";
+
+      const tr = document.createElement("tr");
+      if (rowClass) tr.classList.add(rowClass);
+      tr.innerHTML = `
+        <td class="rank-cell">${medal}</td>
+        <td><span class="team-name">${escHtml(entry.team)}</span></td>
+        <td class="metric score-cell col-score">${score}s</td>
+        <td class="metric">${lapTime}s</td>
+        <td class="metric col-offtk">${offTrack}s</td>
+        <td class="col-offtk" style="font-size:.8rem; color:var(--text-secondary)">${ts} ${runLink}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Update timestamp
+    const updated = data.last_updated
+      ? new Date(data.last_updated).toLocaleString()
+      : new Date().toLocaleString();
+    document.getElementById("last-updated").textContent = "Updated " + updated;
+
+    document.getElementById("status").style.display = "none";
+    document.getElementById("lb-table").style.display = "table";
+
+    applyMode();
+  }
+
+  // ── Display mode ─────────────────────────────────────────────
+  function setMode(mode) {
+    displayMode = mode;
+    localStorage.setItem("lb_mode", mode);
+    applyMode();
+  }
+
+  function applyMode() {
+    const hideCols = displayMode === "laponly";
+    document.querySelectorAll(".col-score, .col-offtk").forEach(el => {
+      el.classList.toggle("col-hidden", hideCols);
+    });
+    document.getElementById("btn-full").classList.toggle("active",    displayMode === "full");
+    document.getElementById("btn-laponly").classList.toggle("active", displayMode === "laponly");
+
+    // Update score note
+    const note = document.querySelector("main > p");
+    if (note) note.style.display = hideCols ? "none" : "";
+  }
+
+  // ── Helpers ──────────────────────────────────────────────────
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  // ── Init ─────────────────────────────────────────────────────
+  fetchLeaderboard();
+  // Auto-refresh every 60 seconds
+  setInterval(fetchLeaderboard, 60_000);
+</script>
+</body>
+</html>
