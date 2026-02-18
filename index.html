@@ -162,11 +162,11 @@
                 flex-wrap: wrap;
             }
 
-            #last-updated {
+            /* #last-updated {
                 font-size: 0.78rem;
                 color: var(--text-secondary);
                 font-family: "Roboto Mono", monospace;
-            }
+            } */
 
             .btn {
                 display: inline-flex;
@@ -387,7 +387,7 @@
                 <div class="card-header">
                     <h2>Team Rankings</h2>
                     <div class="controls">
-                        <span id="last-updated"></span>
+                        <!-- <span id="last-updated"></span> -->
                         <!--
           DISPLAY MODE TOGGLE
           ───────────────────
@@ -576,11 +576,11 @@
                 });
 
                 // Update timestamp
-                const updated = data.last_updated
-                    ? new Date(data.last_updated).toLocaleString()
-                    : new Date().toLocaleString();
-                document.getElementById("last-updated").textContent =
-                    "Updated " + updated;
+                // const updated = data.last_updated
+                //     ? new Date(data.last_updated).toLocaleString()
+                //     : new Date().toLocaleString();
+                // document.getElementById("last-updated").textContent =
+                //     "Updated " + updated;
 
                 document.getElementById("status").style.display = "none";
                 document.getElementById("lb-table").style.display = "table";
