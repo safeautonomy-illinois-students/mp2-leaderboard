@@ -7,11 +7,11 @@
   "teams": [
     {
       "team": "testmp2",
-      "lap_time": 282.99,
+      "lap_time": 282.5,
       "off_track": 0.0,
-      "score": 282.99,
-      "timestamp": "2026-02-18T09:02:37Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-testmp2/actions/runs/22133065832"
+      "score": 282.5,
+      "timestamp": "2026-02-21T03:44:56Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-testmp2/actions/runs/22249627475"
     }
   ]
 }
