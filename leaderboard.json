@@ -14,20 +14,12 @@
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-testmp2/actions/runs/22249627475"
     },
     {
-      "team": "safeset",
+      "team": "safeset-1",
       "lap_time": 127.19,
       "off_track": 1.38,
       "score": 127.19,
       "timestamp": "2026-03-02T00:07:16Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-safeset/actions/runs/22556064217"
-    },
-    {
-      "team": "safeset-1",
-      "lap_time": 127.58,
-      "off_track": 1.52,
-      "score": 127.58,
-      "timestamp": "2026-03-02T00:29:05Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-safeset-1/actions/runs/22556510518"
     }
   ]
 }
