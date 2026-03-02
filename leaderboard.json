@@ -20,6 +20,14 @@
       "score": 127.19,
       "timestamp": "2026-03-02T00:07:16Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-safeset/actions/runs/22556064217"
+    },
+    {
+      "team": "skynet",
+      "lap_time": 11.45,
+      "off_track": 7.99,
+      "score": 13.007,
+      "timestamp": "2026-03-02T00:07:59Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-skynet/actions/runs/22556067359"
     }
   ]
 }
