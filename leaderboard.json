@@ -18,8 +18,8 @@
       "team": "safeset-1",
       "lap_time": 127.19,
       "off_track": 1.38,
-      "penalty": 0.543,
-      "score": 127.733,
+      "penalty": 1.627,
+      "score": 128.817,
       "timestamp": "2026-03-02T00:07:16Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-safeset/actions/runs/22556064217"
     },
@@ -27,8 +27,8 @@
       "team": "safeset",
       "lap_time": 129.75,
       "off_track": 2.0,
-      "penalty": 0.771,
-      "score": 130.521,
+      "penalty": 2.312,
+      "score": 132.062,
       "timestamp": "2026-03-02T01:04:49Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-safeset/actions/runs/22557209577"
     },
@@ -36,8 +36,8 @@
       "team": "team-284",
       "lap_time": 124.27,
       "off_track": 8.04,
-      "penalty": 3.235,
-      "score": 127.505,
+      "penalty": 9.704,
+      "score": 133.974,
       "timestamp": "2026-03-02T01:21:54Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-team-284/actions/runs/22557555644"
     },
@@ -45,8 +45,8 @@
       "team": "wayno",
       "lap_time": 123.36,
       "off_track": 12.96,
-      "penalty": 5.253,
-      "score": 128.613,
+      "penalty": 15.759,
+      "score": 139.119,
       "timestamp": "2026-03-03T01:23:22Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22603761163"
     },

@@ -462,7 +462,7 @@
                     color: var(--text-secondary);
                 "
             >
-                Score = Lap Time + Time Penalty &nbsp;·&nbsp; +5s for each
+                Score = Lap Time + Time Penalty &nbsp;·&nbsp; +15s for each
                 TTF/10 spent off-track &nbsp;·&nbsp; Only
                 each team's best score is shown &nbsp;·&nbsp; Updates after each
                 push to <code>main</code>
@@ -547,7 +547,7 @@
                             ? entry.off_track.toFixed(2)
                             : "—";
 
-                    // Compute penalty seconds: +5s per TTF/10 spent off-track
+                    // Compute penalty seconds: +15s per TTF/10 spent off-track
                     let penaltyStr = "+0s";
                     if (
                         typeof entry.lap_time === "number" &&
@@ -556,7 +556,7 @@
                         entry.off_track > 0
                     ) {
                         const chunks = entry.off_track / (entry.lap_time / 10.0);
-                        const secs = chunks * 5.0;
+                        const secs = chunks * 15.0;
                         penaltyStr = "+" + secs.toFixed(1) + "s";
                     }
 
