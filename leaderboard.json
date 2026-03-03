@@ -58,6 +58,15 @@
       "score": 125.33,
       "timestamp": "2026-03-03T19:41:57Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-mixed-signals/actions/runs/22639500609"
+    },
+    {
+      "team": "lxzzy",
+      "lap_time": 148.98,
+      "off_track": 1.93,
+      "penalty": 1.943,
+      "score": 150.923,
+      "timestamp": "2026-03-03T20:31:55Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-lxzzy/actions/runs/22641337241"
     }
   ]
 }
