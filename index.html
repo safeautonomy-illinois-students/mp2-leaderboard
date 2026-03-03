@@ -463,7 +463,7 @@
                 "
             >
                 Score = Lap Time + Time Penalty &nbsp;·&nbsp; +5s for each
-                TTF/10 spent off-track beyond the allowed 1/3 &nbsp;·&nbsp; Only
+                TTF/10 spent off-track &nbsp;·&nbsp; Only
                 each team's best score is shown &nbsp;·&nbsp; Updates after each
                 push to <code>main</code>
             </p>
@@ -547,20 +547,17 @@
                             ? entry.off_track.toFixed(2)
                             : "—";
 
-                    // Compute penalty seconds (F1-style: +5s per TTF/10 chunk of excess off-track)
+                    // Compute penalty seconds: +5s per TTF/10 spent off-track
                     let penaltyStr = "+0s";
                     if (
                         typeof entry.lap_time === "number" &&
                         typeof entry.off_track === "number" &&
-                        entry.lap_time > 0
+                        entry.lap_time > 0 &&
+                        entry.off_track > 0
                     ) {
-                        const allowed = entry.lap_time * (2.0 / 3.0);
-                        const excess = Math.max(0, entry.off_track - allowed);
-                        if (excess > 0) {
-                            const chunks = excess / (entry.lap_time / 10.0);
-                            const secs = chunks * 5.0;
-                            penaltyStr = "+" + secs.toFixed(1) + "s";
-                        }
+                        const chunks = entry.off_track / (entry.lap_time / 10.0);
+                        const secs = chunks * 5.0;
+                        penaltyStr = "+" + secs.toFixed(1) + "s";
                     }
 
                     const ts = entry.timestamp
