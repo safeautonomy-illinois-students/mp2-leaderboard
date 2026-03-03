@@ -52,11 +52,12 @@
     },
     {
       "team": "mixed-signals",
-      "lap_time": 222.49,
+      "lap_time": 221.67,
       "off_track": 0.0,
-      "score": 222.49,
-      "timestamp": "2026-03-03T18:09:28Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-mixed-signals/actions/runs/22636381354"
+      "penalty": 0.0,
+      "score": 221.67,
+      "timestamp": "2026-03-03T18:18:27Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-mixed-signals/actions/runs/22636623673"
     }
   ]
 }
