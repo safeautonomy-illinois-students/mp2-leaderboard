@@ -49,6 +49,14 @@
       "score": 128.613,
       "timestamp": "2026-03-03T01:23:22Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22603761163"
+    },
+    {
+      "team": "mixed-signals",
+      "lap_time": 222.49,
+      "off_track": 0.0,
+      "score": 222.49,
+      "timestamp": "2026-03-03T18:09:28Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-mixed-signals/actions/runs/22636381354"
     }
   ]
 }
