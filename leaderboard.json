@@ -78,12 +78,12 @@
     },
     {
       "team": "wayno",
-      "lap_time": 129.02,
+      "lap_time": 123.95,
       "off_track": 0.0,
       "penalty": 0.0,
-      "score": 129.02,
-      "timestamp": "2026-03-04T20:40:38Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22688225875"
+      "score": 123.95,
+      "timestamp": "2026-03-04T20:44:35Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22688373629"
     }
   ]
 }
