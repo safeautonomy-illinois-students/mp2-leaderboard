@@ -84,6 +84,14 @@
       "score": 123.95,
       "timestamp": "2026-03-04T20:44:35Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22688373629"
+    },
+    {
+      "team": "invincible",
+      "lap_time": 174.22,
+      "off_track": 0.0,
+      "score": 174.22,
+      "timestamp": "2026-03-04T23:16:00Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-invincible/actions/runs/22693903221"
     }
   ]
 }
