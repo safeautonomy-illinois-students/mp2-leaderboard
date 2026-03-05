@@ -130,12 +130,12 @@
     },
     {
       "team": "automatons",
-      "lap_time": 176.64,
-      "off_track": 0.0,
-      "penalty": 0.0,
-      "score": 176.64,
-      "timestamp": "2026-03-05T22:41:45Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-automatons/actions/runs/22740131543"
+      "lap_time": 128.22,
+      "off_track": 10.29,
+      "penalty": 12.038,
+      "score": 140.258,
+      "timestamp": "2026-03-05T23:15:43Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-automatons/actions/runs/22740834790"
     }
   ]
 }
