@@ -77,15 +77,6 @@
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wayno/actions/runs/22688373629"
     },
     {
-      "team": "molten_core",
-      "lap_time": 158.87,
-      "off_track": 155.35,
-      "penalty": 146.677,
-      "score": 305.547,
-      "timestamp": "2026-03-05T01:03:50Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-molten_core/actions/runs/22697145510"
-    },
-    {
       "team": "thegroup",
       "lap_time": 111.51,
       "off_track": 3.33,
@@ -118,6 +109,15 @@
       "score": 155.65,
       "timestamp": "2026-03-05T20:00:08Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-invincible/actions/runs/22734176112"
+    },
+    {
+      "team": "molten_core",
+      "lap_time": 101.13,
+      "off_track": 20.69,
+      "penalty": 30.688,
+      "score": 131.818,
+      "timestamp": "2026-03-05T20:06:13Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-molten_core/actions/runs/22734442168"
     }
   ]
 }
