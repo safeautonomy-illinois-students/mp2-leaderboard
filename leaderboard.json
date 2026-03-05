@@ -92,6 +92,15 @@
       "score": 174.22,
       "timestamp": "2026-03-04T23:16:00Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-invincible/actions/runs/22693903221"
+    },
+    {
+      "team": "molten_core",
+      "lap_time": 158.87,
+      "off_track": 155.35,
+      "penalty": 146.677,
+      "score": 305.547,
+      "timestamp": "2026-03-05T01:03:50Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-molten_core/actions/runs/22697145510"
     }
   ]
 }
