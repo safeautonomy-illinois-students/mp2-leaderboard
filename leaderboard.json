@@ -136,6 +136,15 @@
       "score": 140.258,
       "timestamp": "2026-03-05T23:15:43Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-automatons/actions/runs/22740834790"
+    },
+    {
+      "team": "ssp",
+      "lap_time": 283.16,
+      "off_track": 0.0,
+      "penalty": 0.0,
+      "score": 283.16,
+      "timestamp": "2026-03-05T23:27:24Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-ssp/actions/runs/22741125746"
     }
   ]
 }
