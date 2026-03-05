@@ -127,6 +127,15 @@
       "score": 154.81,
       "timestamp": "2026-03-05T21:54:02Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-invincible/actions/runs/22738408938"
+    },
+    {
+      "team": "automatons",
+      "lap_time": 176.64,
+      "off_track": 0.0,
+      "penalty": 0.0,
+      "score": 176.64,
+      "timestamp": "2026-03-05T22:41:45Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-automatons/actions/runs/22740131543"
     }
   ]
 }
