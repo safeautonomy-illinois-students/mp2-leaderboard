@@ -157,11 +157,11 @@
     },
     {
       "team": "molten_core",
-      "lap_time": 98.63,
-      "off_track": 6.52,
-      "penalty": 9.916,
-      "score": 108.546,
-      "timestamp": "2026-03-06T05:00:54Z",
+      "lap_time": 98.37,
+      "off_track": 6.18,
+      "penalty": 9.424,
+      "score": 107.794,
+      "timestamp": "2026-03-06T05:08:12Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-molten_core/actions/runs/22749784557"
     }
   ]
