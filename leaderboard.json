@@ -155,6 +155,14 @@
       "score": 234.51,
       "timestamp": "2026-03-06T21:52:27Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-owca/actions/runs/22783326009"
+    },
+    {
+      "team": "team-284",
+      "lap_time": 163.62,
+      "off_track": 5.8,
+      "score": 163.62,
+      "timestamp": "2026-03-06T22:21:28Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-team-284/actions/runs/22784234901"
     }
   ]
 }
