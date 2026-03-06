@@ -154,6 +154,15 @@
       "score": 205.847,
       "timestamp": "2026-03-06T01:41:14Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-ssp/actions/runs/22745027480"
+    },
+    {
+      "team": "abo",
+      "lap_time": 139.7,
+      "off_track": 4.23,
+      "penalty": 4.542,
+      "score": 144.242,
+      "timestamp": "2026-03-06T02:01:06Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-abo/actions/runs/22745520138"
     }
   ]
 }
