@@ -148,12 +148,12 @@
     },
     {
       "team": "ssp",
-      "lap_time": 216.63,
+      "lap_time": 205.94,
       "off_track": 0.0,
       "penalty": 0.0,
-      "score": 216.63,
-      "timestamp": "2026-03-06T01:07:00Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-ssp/actions/runs/22744102665"
+      "score": 205.94,
+      "timestamp": "2026-03-06T01:13:37Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-ssp/actions/runs/22744300565"
     }
   ]
 }
