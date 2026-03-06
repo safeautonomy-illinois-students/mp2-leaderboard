@@ -147,15 +147,6 @@
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-mixed-signals/actions/runs/22745677266"
     },
     {
-      "team": "thegroup",
-      "lap_time": 100.72,
-      "off_track": 7.84,
-      "penalty": 11.676,
-      "score": 112.396,
-      "timestamp": "2026-03-06T02:29:37Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-thegroup/actions/runs/22746281866"
-    },
-    {
       "team": "ssp",
       "lap_time": 165.01,
       "off_track": 0.43,
@@ -163,6 +154,15 @@
       "score": 165.401,
       "timestamp": "2026-03-06T02:38:05Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-ssp/actions/runs/22746407399"
+    },
+    {
+      "team": "thegroup",
+      "lap_time": 106.45,
+      "off_track": 2.8,
+      "penalty": 3.946,
+      "score": 110.396,
+      "timestamp": "2026-03-06T02:59:18Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-thegroup/actions/runs/22746980807"
     }
   ]
 }
