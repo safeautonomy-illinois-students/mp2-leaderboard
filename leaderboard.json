@@ -157,12 +157,12 @@
     },
     {
       "team": "wip",
-      "lap_time": 14.921,
-      "off_track": 7.031,
-      "penalty": 70.682,
-      "score": 85.603,
-      "timestamp": "2026-03-07T02:41:10Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wip/actions/runs/22790288428"
+      "lap_time": 15.605,
+      "off_track": 6.555,
+      "penalty": 63.009,
+      "score": 78.614,
+      "timestamp": "2026-03-07T02:55:34Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-wip/actions/runs/22790544083"
     }
   ]
 }
