@@ -122,14 +122,6 @@
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-molten_core/actions/runs/22749784557"
     },
     {
-      "team": "owca",
-      "lap_time": 234.51,
-      "off_track": 17.29,
-      "score": 234.51,
-      "timestamp": "2026-03-06T21:52:27Z",
-      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-owca/actions/runs/22783326009"
-    },
-    {
       "team": "skynet",
       "lap_time": 162.26,
       "off_track": 0.38,
@@ -163,6 +155,14 @@
       "score": 160.77,
       "timestamp": "2026-03-07T03:24:53Z",
       "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-team-284/actions/runs/22790994776"
+    },
+    {
+      "team": "owca",
+      "lap_time": 228.88,
+      "off_track": 0.0,
+      "score": 228.88,
+      "timestamp": "2026-03-07T04:46:00Z",
+      "run_url": "https://github.com/safeautonomy-illinois-students/mp2-sp26-owca/actions/runs/22792220588"
     }
   ]
 }
